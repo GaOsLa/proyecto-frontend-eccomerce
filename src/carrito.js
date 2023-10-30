@@ -63,22 +63,3 @@ tableBody.addEventListener("click", (event) => {
   }
 });
 
-/*tableBody.addEventListener("click", (event) => {
-  if (event.target.tagName === "BUTTON") {
-    const codigoProductoAEliminar = event.target.getAttribute("data-codigo");
-    console.log(codigoProductoAEliminar)
-
-    // Encontrar y eliminar el producto correspondiente de 'carritoLS'
-    const indexAEliminar = carritoLS.findIndex((producto) => producto.codigo === codigoProductoAEliminar);
-    console.log(indexAEliminar)
-
-    if (indexAEliminar !== -1) {
-      carritoLS.splice(indexAEliminar, 1);
-      // Actualizar el carrito en el localStorage
-      localStorage.setItem("carrito", JSON.stringify(carritoLS));
-
-      // Volver a cargar el carrito
-      cargarCarrito(carritoLS);
-    }
-
-*/
