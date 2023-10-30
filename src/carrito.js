@@ -48,6 +48,23 @@ cargarCarrito(carritoLS);
 
 tableBody.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
+    let codigoProductoAEliminar = event.target.getAttribute("data-codigo");
+   
+    // Encontrar y eliminar el producto correspondiente de 'carritoLS'
+    let indexAEliminar = carritoLS.findIndex((producto) => producto.codigo === parseInt(codigoProductoAEliminar));
+   
+    if (indexAEliminar !== -1) {
+      carritoLS.splice(indexAEliminar, 1);
+      // Actualizar el carrito en el localStorage
+      localStorage.setItem("carrito", JSON.stringify(carritoLS));
+        // Volver a cargar el carrito
+      cargarCarrito(carritoLS);
+    }
+  }
+});
+
+/*tableBody.addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
     const codigoProductoAEliminar = event.target.getAttribute("data-codigo");
     console.log(codigoProductoAEliminar)
 
@@ -63,6 +80,5 @@ tableBody.addEventListener("click", (event) => {
       // Volver a cargar el carrito
       cargarCarrito(carritoLS);
     }
-  }
-});
 
+*/

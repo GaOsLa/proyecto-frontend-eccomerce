@@ -1,3 +1,38 @@
+let listaProductos;
+
+async function getDataAPI() {
+
+    
+    try {
+      const options = { method: "GET" };
+      const response = await fetch("https://www.guarlo.com.ar/pi2/tiendaarg/api/", options);
+  
+      if (!response.ok) {
+        console.log('error al conectar')
+        throw new Error("La solicitud no pudo completarse.");
+      } else{
+        console.log('coneccion exitosa')
+      }
+  
+      const data = await response.json();
+      listaProductos = data.results;
+      
+      const jsonResultado = JSON.stringify(listaProductos);
+      localStorage.setItem("listaProductos", jsonResultado);
+    
+      cargarProductos(data.results);
+      
+    } catch (error) {
+      //console.log(error.message);
+      domTarjetas.innerHTML = `<p class="alert alert-danger">${error.message}</p>`;;
+    }
+  }
+  
+listaProductos = getDataAPI();
+console.log(listaProductos);
+
+cargarProductos(listaProductos)
+
 
 const sectionCards = document.getElementById("section-cards");
 const crearProductoHTML = (producto) => {
@@ -23,8 +58,8 @@ const crearProductoHTML = (producto) => {
     `;
 };
 
-const cargarProductos = (productos) => {
-
+async function cargarProductos(productos) {
+    console.log('cargarProductos', productos)
 
     if (productos.length > 0) {
         sectionCards.innerHTML = "";
@@ -32,10 +67,7 @@ const cargarProductos = (productos) => {
             sectionCards.innerHTML += crearProductoHTML(producto);
         });
     } else {
-        alert("⛔️ No se han podido cargar los productos");
+        // alert("⛔️ No se han podido cargar los productos");
     }
 };
-
-
-
-cargarProductos(productos)
+ 

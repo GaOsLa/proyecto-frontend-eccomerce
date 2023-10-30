@@ -1,6 +1,6 @@
-// let carrito = [];
 
 const carritoLS = JSON.parse(localStorage.getItem("carrito")) || []; //para saber que contiene el localStorage
+const productos = JSON.parse(localStorage.getItem("listaProductos")); //obtener el array de productos
 document.addEventListener("DOMContentLoaded", () => {
     // Obtén el código del producto de la URL
     const urlParams = new URLSearchParams(window.location.search);
