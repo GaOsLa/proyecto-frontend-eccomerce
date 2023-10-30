@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Carrito de Compras</title>
+    <link rel="icon" href="../img/favicon (1).ico">
+    <link rel="stylesheet" href="../css/detalleproducto.css">
+    <link rel="stylesheet" href="../css/carrito.css" />
+  </head>
+  <body>
+  
+      <header class="header"> 
+        <div class="headerimg">
+          <a href="../index.html"> <img src="../img/virtual.png" alt="logoeccomerce"></a> 
+        </div>
+        <div class="presentacion">
+        <h1>Bienvenidos a TIENDARG</h1>
+        </div>
+        <div class="carrito"><a href="carrito.html">
+          <img src="../img/iconos/carrito-de-compras.png" alt="">
+          <h3>
+             MIS COMPRAS
+          </h3></a>
+        </div>
+        <div class="headerlist">
+          <ul><li><a href="formulario.html">¡Registrate para recibir las mejores ofertas! </a></li></ul>
+
+          <!-- direcciones (anchor hacia las distintas partes de la pagina y otras paginas ) -->
+        </div>
+    </header>
+
+   <main>
+    <div class="fondo">
+      <div class="container">
+        <div class="carrito-encabezado">
+          <div>
+            <h2>CARRITO DE COMPRAS</h2>
+            
+          </div>
+          <div>
+            <button
+              id="volver"
+              class="producto__btn-carrito"
+              onclick="regresarAlFormularioAnterior()"
+            >
+              Volver
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Descripción</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Unitario</th>
+                <th scope="col">Total</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="detalle-carrito">
+              <!-- Aquí se mostrarán los productos del carrito -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="1">
+                  <h3 class="carrito-total">Total</h3>
+                </th>
+                <th>
+                  <div id="importeTotalCarrito">$ 0,00</div>
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="container">
+        <a href="pago.html"
+          ><button type="submit" class="boton_carrito_comprar">
+            Pagar ahora
+          </button></a
+        >
+      </div>
+    </main>
+    </div><script src="../src/carrito.js"></script>
+    <script>
+      function regresarAlFormularioAnterior() {
+        window.history.back(); // Retrocede una página en el historial del navegador
+      }
+    </script>
+    <!-- <script src="../src/carrito.js"></script> -->
+  </body>
+</html>

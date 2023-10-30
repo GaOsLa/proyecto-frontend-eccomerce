@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+main{
+  color: white;
+  margin-top: 0%;
+  width: 100%;
+  height: 1000px;
+  background-image: url('../img/web-1012467_1280.jpg');
+  background-size: cover; /* Ajusta la imagen al tamaño de la ventana del navegador */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+ul  {
+    text-decoration:none;
+    list-style: none;
+  }
+  
+  .header {
+    
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: #302d58;
+    color: #eff5f5;
+    justify-content:space-around;
+  }
+  .headerimg{
+    width: 300px;
+    height: 100%;
+    display: flex;
+  
+  }
+  .headerimg img {
+     width: 200px;
+     height: 100%;
+  }
+  
+  .presentacion{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  
+  .headerlist{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(250, 250, 250);
+   
+  }
+  .carrito{
+    
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrito a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #f7f6f6;
+  }
+  .carrito img{
+       display: flex;
+       width: 54px;
+       height: 54px;
+  
+  }
+  .headerlist ul{
+    padding-inline-start:0%;
+  }
+  .headerlist a {
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+   color: rgb(253, 253, 253);
+  }
+
+
+.titulos{
+  display: block;
+}
+.titulos h3{
+  font-size: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.titulos h4{
+  font-size: 40px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+section{
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+ 
+}
+.credito{
+
+  font-size: 30px;
+  width: 400px;
+  height:100%;
+  margin: 10px;
+  border: 2px solid black;
+}
+
+.credito h4{
+  font-size: 50px;
+}
+label{
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.input{
+  display: flex;
+  justify-content: center;
+  
+}
+input{
+ 
+  font-weight: 800;
+  font-size: 20px;
+  height: 30px;
+}
+.debito{
+  font-size: 30px;
+  width: 400px;
+  height:100%;
+  margin: 10px;
+  border: 2px solid black;
+}
+.debito h4{
+  font-size: 50px;
+}
+.botonPagar{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (width < 1200px) {
+  .header {
+    height: 110px;
+  }
+  .header h1 {
+    display: none;
+  }
+  .header .cont-nav {
+    justify-content: center;
+    padding-left: 20px;
+    width: 100%;
+  }
+  .header li a {
+    font-size: 13px;
+  }
+}
+
+@media screen and (width < 740px){
+  .headerimg img{
+    width: 200px;
+  }
+  .presentacion h1{
+    display: none;
+  }
+ .producto-detalle{
+  width: 500px;
+ }
+
+}
+
+@media screen and (width < 640px){
+  section{display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;}
+
+}
+
+@media screen and (width < 540px){
+ 
+.header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+header .carrito{
+  width: 100%;
+}
+
+.presentacion h1{
+  display: flex;
+}
+  .headerimg {
+    display: none;
+    
+  }
+ .credito{
+  width: 320px;
+ }
+ .debito{
+  width: 320px;
+ }
+
+}
+
+@media screen and (width < 420px) {
+  .presentacion h1{
+    font-size: 20px;
+    
+  }
+}
+@media screen and (width < 420px) {
+.credito{
+  width: 300px;
+ }
+ .debito{
+  width: 300px;
+ }
+
+}

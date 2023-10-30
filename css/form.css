@@ -1,0 +1,144 @@
+html {
+    margin: 0%;
+   }
+   
+   body {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #d9afd9;
+    background-image: linear-gradient(0deg, #cdfaff 00%, #d9afd9 100%);
+   }
+   .divimg{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+  main {
+    /* background-image: url(../img/fondo.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 950px;
+    text-align: center;
+    justify-content: center;
+  }
+  main .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #ffffff transparent;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  main .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    justify-content: center;
+  }
+  main .title::before, main .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  main .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  main .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  main .message, main .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  main .signin {
+    text-align: center;
+  }
+  main .signin a {
+    color: royalblue;
+  }
+  main .signin a:hover {
+    -webkit-text-decoration: underline royalblue;
+            text-decoration: underline royalblue;
+  }
+  main .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  main .form label {
+    position: relative;
+  }
+  main .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  main .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  main .form label .input:-moz-placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  main .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  main .form label .input:focus + span, main .form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  main .form label .input:valid + span {
+    color: green;
+  }
+  main .submit {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: 0.3s ease;
+  }
+  main .submit:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,9 @@
+lineas 86 
+        verificar que el producto no este en el carrito y de ser positivo unificar el pedido
+
+general
+        eliminar comentarios no necesarios
+        eliminar lineas comentadas y console.log no necesarios
+
+
+        
